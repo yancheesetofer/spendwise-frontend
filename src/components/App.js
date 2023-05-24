@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "./General/Navbar";
-import CreateEntry from "./Entry/CreateEntry";
+import Menu from "./General/Menu";
+import CreateEntry from "./Entry/CreateEntry/CreateEntry.js";
 
 const App = () => {
     return (
-        <div className="">
+        <>
             <Navbar />
-            <CreateEntry />
-        </div>
+            {/* <CreateEntry /> */}
+        </>
     );
 };
 
