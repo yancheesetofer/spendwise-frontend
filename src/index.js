@@ -13,45 +13,48 @@ import CreateEntry from "./routes/CreateEntry";
 import ListEntry from "./routes/ListEntry";
 import EntryDetail from "./components/Entry/EntryDetail";
 
-import Error from  "./components/General/404";
-
-
+import Error from "./components/General/404";
+import BudgetPlanner from "./components/Plan/Planner";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <Error />,
+    children: [
+      {
         path: "/",
-        element: <Root />,
-        errorElement: <Error />,
-        children: [
-            {
-                path: "/",
-                element: <Home />
-            },
-            {
-                path: "transactions/*",
-                element: <Transaction />
-            },
-            {
-                path: "transactions/add/",
-                element: <CreateEntry />
-            },
-            {
-                path: "transactions/diary/",
-                element: <ListEntry />
-            },
-            {
-                path: "transactions/diary/:id",
-                element: <EntryDetail />
-            }
-        ]
-    }
+        element: <Home />,
+      },
+      {
+        path: "transactions/*",
+        element: <Transaction />,
+      },
+      {
+        path: "transactions/add/",
+        element: <CreateEntry />,
+      },
+      {
+        path: "transactions/diary/",
+        element: <ListEntry />,
+      },
+      {
+        path: "transactions/diary/:id",
+        element: <EntryDetail />,
+      },
+      {
+        path: "planner/*",
+        element: <BudgetPlanner />,
+      },
+    ],
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router}>
-            <App />
-        </RouterProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
+  </React.StrictMode>
 );
