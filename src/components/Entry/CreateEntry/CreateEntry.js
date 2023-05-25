@@ -16,9 +16,12 @@ const CreateEntry = () => {
     <div>
         <div>Create Entry</div>
 
-        <Amount onAmountUpdate={handleAmountUpdate} />
 
-        <div>
+        <div className='flex flex-col justify-center items-center'>
+            {/* Main amount input field */}
+            <Amount onAmountUpdate={handleAmountUpdate} />
+
+
             {/* Form Body */}
             <label htmlFor="type">Type</label>
             <select name='type' id='type'>
