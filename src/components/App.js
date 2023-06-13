@@ -7,6 +7,7 @@ import Menu from "./General/Menu";
 import BudgetPlanner from "./Plan/Planner";
 import CreateEntry from "./Entry/CreateEntry/CreateEntry.js";
 import TransactionsHome from "./Entry/TransactionsHome";
+import Planner from "./Plan/Planner";
 
 const App = () => {
   return (

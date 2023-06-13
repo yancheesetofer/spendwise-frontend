@@ -10,7 +10,7 @@ src\components\General\nav.js
 /coverage
 
 # production
-/build
+
 
 # misc
 .DS_Store
